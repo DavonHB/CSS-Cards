@@ -1,0 +1,89 @@
+*, *::before, **::after {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.card {
+    --padding: 1rem;
+    background: white;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: .25rem;
+    overflow: hidden;
+    padding: 0;
+}
+
+.card-shadow {
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4)
+}
+
+.card-header.card-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-header.card-image > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-height: 200px;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+
+.card:hover > .card-header.card-image > img {
+   transform: scale(1.1) 
+}
+
+.card-body {
+    padding: 0 var(--padding)
+}
+
+.card-header {
+    padding: var(--padding);
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.card-footer {
+    margin-top: 1rem;
+    padding: var(--padding);
+    padding-top: 0;
+}
+
+.btn {
+    background: lightblue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: .5em, .75em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+    background: rgba(173, 216, 230, 0.734);
+}
+
+.btn.btn-secondary {
+    background: none;
+    border: 1px solid lightblue;
+    color: lightblue;
+}
+
+.btn.btn-secondary:hover, .btn.btn-secondary:focus {
+    background: rgba(173, 216, 230, 0.551)
+}
+
+.btn + .btn {
+    margin-left: 2rem
+}
